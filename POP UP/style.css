@@ -1,0 +1,168 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+:root {
+  --open-btn-color: #5cc1fe;
+  --unistall-btn-color: #ff3c30;
+  --cancel-btn-color: #d7deea;
+  --main-font-color: #6c6f77;
+}
+
+#main-page {
+  width: 100%;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background: url('./img/baground-image-shazam.jpeg') no-repeat center 100%
+    #5cc1fe;
+  background-size: cover;
+}
+
+#btn__open {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-color: var(--open-btn-color);
+  color: var(--main-font-color);
+}
+
+.btn {
+  padding: 10px 30px;
+  border: 2px solid;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  top: 25%;
+  left: 50%;
+  cursor: pointer;
+}
+
+.btn__main {
+  background-color: var(--unistall-btn-color);
+  border-color: var(--unistall-btn-color);
+  color: white;
+}
+
+#popup {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  width: 100%;
+  height: 55%;
+  background-color: white;
+  border-radius: 5px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation-name: popup;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes popup {
+  10% {top: 90%}
+ }
+
+.popup__body {
+  min-height: 100%;
+  padding: 40px;
+}
+
+.popup__close {
+  position: absolute;
+  right: 10;
+  top: 10;
+}
+
+.popup__content {
+  max-width: 500px;
+  padding: 30px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-font-color);
+}
+
+.popup__image {
+  height: 150px;
+  padding-bottom: 50px;
+}
+
+.popup__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.popup_btn_body {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+#btn__close {
+  background-color: white;
+  border-color: var(--cancel-btn-color);
+  color: var(--main-font-color);
+}
+
+@media (min-width: 435px) {
+  .popup_btn_body {
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 488px) {
+  .popup__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .popup__content {
+    padding: 0;
+  }
+}
+
+/* SUCCESS MESSAGE*/
+.popup_success-message {
+  text-align: center;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.success-message__icon {
+  max-width: 75px;
+}
+.success-message__title {
+  color: #3dc480;
+}
+
+.success-message__content {
+  color: var(--main-font-color);
+  font-size: 20px;
+}
+
+.icon-checkmark {
+  fill: #3dc480;
+  animation-name: checkmark;
+  animation-duration: 4s;
+  padding-bottom: 50px;
+}
+
+@keyframes checkmark {
+  from {fill: #3dc480;}
+  to {fill: white;}
+}
+

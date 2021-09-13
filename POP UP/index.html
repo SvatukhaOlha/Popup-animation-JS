@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>POP UP</title>
+</head>
+<body>
+ <section id="main-page">
+    <button id='btn__open' class="btn btn__main btn__open">Open Pop Up</button>
+ </section>
+ <section id="popup">
+    <div class="popup__body">
+        <a href="" id='btn__close' class="popup__close">
+            <img class="popup_icon_close" src="img/icon-popup-close.svg" alt="icon close">
+        </a>
+        <div class="popup__content">
+           <img class="popup__image" src="img/icon-warning_notify-red.svg" alt="red warning logo">
+           <div class="popup__title">Are you sure you want to unistall the Shazam app</div>
+        </div>
+        <div class="popup_btn_body">
+            <button id='btn__close' class="btn btn__cancel">Cancel</button>
+            <button id='btn__unistall' class="btn btn__main btn__unistall">Unistall</button>
+        </div>
+    </div>
+    <div class="popup_success-message">
+        <svg viewBox="0 0 76 76" class="success-message__icon icon-checkmark">
+            <circle cx="38" cy="38" r="36"/>
+            <path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M17.7,40.9l10.9,10.9l28.7-28.7"/>
+        </svg>
+        <h1 class="success-message__title">DONE</h1>
+        <div class="success-message__content">
+            <p class="success-message__content">Uninstalling completed successfully</p>
+        </div>
+    </div>
+ </section>
+<script src="script.js"></script>
+</body>
+</html>
